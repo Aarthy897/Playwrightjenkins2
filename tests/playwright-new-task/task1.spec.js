@@ -13,7 +13,6 @@ test('placing order',async({page})=>{
     //click javascript link
     const js=await page.getByRole('link',{name:'JavaScript'}).last()
     await js.click()
-    console.log("goo")
     //counting how many text present in DOM
     const count = await page.getByText('Functional Programming in JS').count();
     console.log(count);
@@ -152,6 +151,6 @@ test('placing order',async({page})=>{
     await page.waitForTimeout(3000)
 
     //take screenshot
-    await page.screenshot({path:'C:\\Users\\karth\\OneDrive\\Desktop\\PlayWright\\screenshots\\task6.png',fullPage:false})
+    await page.screenshot({path:'C:\\Users\\karth\\OneDrive\\Desktop\\PlayWright\\screenshots\\task6.png',fullPage:true})
 
 })
