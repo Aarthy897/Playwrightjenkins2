@@ -1,0 +1,10 @@
+const {test,expect}=require('@playwright/test')
+test('loginPage',async({page})=>{
+await page.goto("https://testautomationpractice.blogspot.com/")
+await page.locator('#name').fill('aarthy')
+await page.locator('#email').fill('aarthy897@gmail.com')
+await page.fill('#phone','9688809535')
+//await page.locator("//button[text()='START']").click()
+await page.getByRole("button",{name:'start'}).click()
+await page.waitForTimeout(3000)
+})
